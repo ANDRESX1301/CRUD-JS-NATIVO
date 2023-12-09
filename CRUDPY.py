@@ -14,7 +14,7 @@ registros = []
 def crear_registro():
     # Solicita al usuario información para crear un nuevo registro
     print("\n**********************************************") 
-    numero = int(numero+1)
+    numero = 1 if not registros else registros[-1].numero + 1
     cedula = int(input("Ingrese la Cedula del registro: "))
     nombre = input("Ingrese el nombre: ")
     edad = int(input("Ingrese la edad: "))
@@ -49,7 +49,7 @@ def leer_todosregistros():
     if registros:
         # Itera sobre la lista e imprime los atributos de cada registro
         for registro in registros:
-            print(f"Numero={registro.numero}, CC={registro.id}, Nombre={registro.nombre}, Edad={registro.edad}")
+            print(f"Numero={registro.numero}, CC={registro.cedula}, Nombre={registro.nombre}, Edad={registro.edad}")
     else:
         print("No hay registros almacenados.")
 
