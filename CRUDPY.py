@@ -76,7 +76,6 @@ def actualizar_registro():
         print("Registro no encontrado.")
 
 # Función para eliminar un registro de la lista
-#esto tambien es una prueba
 def eliminar_registro():
     # Solicita al usuario el ID del registro que desea eliminar
     print("Ha escogido eliminar un registro")
@@ -93,7 +92,6 @@ def eliminar_registro():
         print("Registro no encontrado.")
 
 # Función para imprimir el menú de opciones
-
 def imprimir_menu():
     print("\n**********************************************")   
     print("Menú de opciones")
