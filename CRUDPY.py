@@ -14,6 +14,7 @@ registros = []
 def crear_registro():
     # Solicita al usuario información para crear un nuevo registro
     print("\n**********************************************") 
+    print("Ha escogido crear registro")
     numero = 1 if not registros else registros[-1].numero + 1
     cedula = int(input("Ingrese la Cedula del registro: "))
     nombre = input("Ingrese el nombre: ")
@@ -32,6 +33,7 @@ def crear_registro():
 # Función para leer un registro específico según su ID
 def leer_registro():
     # Solicita al usuario el ID del registro que desea consultar
+    print("Ha escogido leer un registro")
     cedula = int(input("Ingrese la Cedula del registro a leer: "))
     
     # Busca el registro en la lista de registros
@@ -46,6 +48,7 @@ def leer_registro():
 # Función para imprimir todos los registros almacenados
 def leer_todosregistros():
     # Verifica si hay registros en la lista
+    print("Ha escogido Leer todos los registros")
     if registros:
         # Itera sobre la lista e imprime los atributos de cada registro
         for registro in registros:
@@ -56,6 +59,7 @@ def leer_todosregistros():
 # Función para actualizar la información de un r1egistro existente
 def actualizar_registro():
     # Solicita al usuario el ID del registro que desea actualizar
+    print("Ha escogido actualizar un registro")
     cedula = int(input("Ingrese la Cedula del registro a actualizar: "))
     
     # Busca el registro en la lista de registros
@@ -74,6 +78,7 @@ def actualizar_registro():
 # Función para eliminar un registro de la lista
 def eliminar_registro():
     # Solicita al usuario el ID del registro que desea eliminar
+    print("Ha escogido eliminar un registro")
     cedula = int(input("Ingrese la Cedula del registro a eliminar: "))
     
     # Busca el registro en la lista de registros
@@ -105,7 +110,7 @@ while True:
 
     # Realiza la acción correspondiente según la opción seleccionada
     if opcion == "1":
-        crear_registro()
+        crear_registro()        
     elif opcion == "2":
         leer_registro()
     elif opcion == "3":
