@@ -1,8 +1,9 @@
 # Definición de la clase Registro para representar un objeto de registro
 class Registro:
-    def __init__(self, id, nombre, edad):
+    def __init__(self, numero, cedula, nombre, edad):
         # Constructor que inicializa los atributos del objeto Registro
-        self.id = id
+        self.numero = numero
+        self.cedula = cedula
         self.nombre = nombre
         self.edad = edad
 
@@ -13,13 +14,14 @@ registros = []
 def crear_registro():
     # Solicita al usuario información para crear un nuevo registro
     print("\n**********************************************") 
-    id = int(input("Ingrese el ID del registro: "))
+    numero = int(numero+1)
+    cedula = int(input("Ingrese la Cedula del registro: "))
     nombre = input("Ingrese el nombre: ")
     edad = int(input("Ingrese la edad: "))
     print("*********************************************\n") 
     
     # Crea una instancia de la clase Registro con la información proporcionada
-    registro = Registro(id, nombre, edad)
+    registro = Registro(numero, cedula, nombre, edad)
     
     # Agrega el registro a la lista de registros
     registros.append(registro)
@@ -30,14 +32,14 @@ def crear_registro():
 # Función para leer un registro específico según su ID
 def leer_registro():
     # Solicita al usuario el ID del registro que desea consultar
-    id = int(input("Ingrese el ID del registro a leer: "))
+    cedula = int(input("Ingrese la Cedula del registro a leer: "))
     
     # Busca el registro en la lista de registros
-    registro = next((r for r in registros if r.id == id), None)
+    registro = next((r for r in registros if r.cedula == cedula), None)
     
     # Muestra la información si el registro se encuentra, de lo contrario, imprime un mensaje
     if registro:
-        print(f"Registro encontrado: ID={registro.id}, Nombre={registro.nombre}, Edad={registro.edad}")
+        print(f"Registro encontrado: Numero={registro.numero}, CC={registro.cedula}, Nombre={registro.nombre}, Edad={registro.edad}")
     else:
         print("Registro no encontrado.")
 
@@ -47,17 +49,17 @@ def leer_todosregistros():
     if registros:
         # Itera sobre la lista e imprime los atributos de cada registro
         for registro in registros:
-            print(f"ID={registro.id}, Nombre={registro.nombre}, Edad={registro.edad}")
+            print(f"Numero={registro.numero}, CC={registro.id}, Nombre={registro.nombre}, Edad={registro.edad}")
     else:
         print("No hay registros almacenados.")
 
 # Función para actualizar la información de un r1egistro existente
 def actualizar_registro():
     # Solicita al usuario el ID del registro que desea actualizar
-    id = int(input("Ingrese el ID del registro a actualizar: "))
+    cedula = int(input("Ingrese la Cedula del registro a actualizar: "))
     
     # Busca el registro en la lista de registros
-    registro = next((r for r in registros if r.id == id), None)
+    registro = next((r for r in registros if r.cedula == cedula), None)
     
     # Actualiza la información del registro si se encuentra, de lo contrario, imprime un mensaje
     if registro:
@@ -72,10 +74,10 @@ def actualizar_registro():
 # Función para eliminar un registro de la lista
 def eliminar_registro():
     # Solicita al usuario el ID del registro que desea eliminar
-    id = int(input("Ingrese el ID del registro a eliminar: "))
+    cedula = int(input("Ingrese la Cedula del registro a eliminar: "))
     
     # Busca el registro en la lista de registros
-    registro = next((r for r in registros if r.id == id), None)
+    registro = next((r for r in registros if r.cedula == cedula), None)
     
     # Elimina el registro de la lista si se encuentra, de lo contrario, imprime un mensaje
     if registro:
