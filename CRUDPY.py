@@ -92,7 +92,7 @@ def eliminar_registro():
         print("Registro no encontrado.")
 
 # Función para imprimir el menú de opciones
-#Este comentario prueba la funcionalidad de aprobacion de merge
+
 def imprimir_menu():
     print("\n**********************************************")   
     print("Menú de opciones")
