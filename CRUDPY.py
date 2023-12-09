@@ -76,6 +76,7 @@ def actualizar_registro():
         print("Registro no encontrado.")
 
 # Función para eliminar un registro de la lista
+#esto tambien es una prueba
 def eliminar_registro():
     # Solicita al usuario el ID del registro que desea eliminar
     print("Ha escogido eliminar un registro")
