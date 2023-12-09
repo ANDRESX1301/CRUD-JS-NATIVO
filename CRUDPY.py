@@ -85,6 +85,7 @@ def eliminar_registro():
     registro = next((r for r in registros if r.cedula == cedula), None)
     
     # Elimina el registro de la lista si se encuentra, de lo contrario, imprime un mensaje
+    #prueba comentario para merge
     if registro:
         registros.remove(registro)
         print("Registro eliminado con éxito.")
